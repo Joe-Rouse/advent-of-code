@@ -1,0 +1,19 @@
+{
+	"name": "joerouse/advent-of-code-2024",
+	"description": "Advent of Code 2024",
+	"type": "project",
+	"require-dev": {
+		"bigbite/phpcs-config": "2.0.1"
+	},
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "git@github.com:bigbite/phpcs-config.git"
+		}
+	],
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	}
+}
