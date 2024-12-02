@@ -7,8 +7,7 @@ use AOC\TwentyTwentyFour\Interfaces\Day;
 class Day2 implements Day {
 	private function get_input() {
 		$input = file_get_contents( 'input.txt' );
-		$input = explode( "\n", $input );
-		return $input;
+		return explode( "\n", $input );
 	}
   
 	public function is_report_safe( $report ) {
@@ -16,18 +15,20 @@ class Day2 implements Day {
 		$decreasing  = true;
 		$report_size = count( $report );
   
-		for ( $i = 0; $i < $report_size - 1; $i++ ) {
-			if ( $report[ $i ] > $report[ $i + 1 ] ) {
-				$increasing = false;
-			}
-			if ( $report[ $i ] < $report[ $i + 1 ] ) {
-				$decreasing = false;
-			}
-  
-			$difference = abs( $report[ $i ] - $report[ $i + 1 ] );
-			if ( $difference < 1 || $difference > 3 ) {
-				$increasing = false;
-				$decreasing = false;
+		foreach ( $report as $i => $value ) {
+			if ( $i < $report_size - 1 ) {
+				if ( $report[ $i ] > $report[ $i + 1 ] ) {
+					$increasing = false;
+				}
+				if ( $report[ $i ] < $report[ $i + 1 ] ) {
+					$decreasing = false;
+				}
+	
+				$difference = abs( $report[ $i ] - $report[ $i + 1 ] );
+				if ( $difference < 1 || $difference > 3 ) {
+					$increasing = false;
+					$decreasing = false;
+				}
 			}
 		}
   
