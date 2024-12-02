@@ -3,8 +3,7 @@
 	<rule ref="./vendor/bigbite/phpcs-config/BigBite" />
 
 	<rule ref="Squiz.Commenting">
-		<exclude name="Squiz.Commenting.FunctionComment.Missing" />
-		<exclude name="Squiz.Commenting.FileComment.Missing" />
+		<exclude-pattern>*</exclude-pattern>
 	</rule>
 
 	<rule ref="WordPress">

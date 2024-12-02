@@ -5,6 +5,14 @@
 	"require-dev": {
 		"bigbite/phpcs-config": "2.0.1"
 	},
+	"autoload": {
+		"classmap": [
+			"inc/"
+		],
+		"files": [
+			"inc/utils.php"
+		]
+	},
 	"repositories": [
 		{
 			"type": "vcs",
